@@ -1,18 +1,25 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  const splitString = word.split("")
+  const reverseArray = splitString.reverse()
+  const joinArrray = reverseArray.join("")
+  if (joinArrray === word){return true}
+  else {return false}
 }
 
 /* 
-  Add your pseudocode here
+ i looked up on goole how to reverse
 */
 
 /*
-  Add written explanation of your solution here
+ i split the satring and re-joined it
 */
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
   // add your own custom tests in here
+
+   console.log(isPalindrome("mom"));
+
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
 
